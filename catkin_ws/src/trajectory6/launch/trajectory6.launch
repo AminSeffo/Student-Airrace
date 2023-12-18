@@ -1,0 +1,10 @@
+<launch>
+  <!-- Run the trajectory publisher node -->
+  <node name="trajectory6" pkg="trajectory6" type="trajectory6" output="screen"/>
+
+  <!--- Trajectory sampler -->
+  <node name="sampler" pkg="mav_trajectory_generation_ros" type="trajectory_sampler_node" output="screen">
+      <remap from="path_segments" to="trajectory"/>
+  </node>
+  
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+    <!-- Run the calibration node -->
+    <node name="calibration" pkg="navigation" type="calibration" output="screen" />
+    <!-- Run the exploration node -->
+    <node 
+        name="navigation" pkg="navigation" type="navigation" output="screen" >
+        <rosparam command="load" file="$(find navigation)/config/config.yaml"/>
+    </node>
+</launch>

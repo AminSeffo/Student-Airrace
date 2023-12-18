@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/lucads/autsys-projects-student-airrace/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/lucads/autsys-projects-student-airrace/catkin_ws/src/mapping/aruco_ros/aruco/include/**",
+        "/home/lucads/autsys-projects-student-airrace/catkin_ws/src/mapping/aruco_ros/aruco_ros/include/**",
+        "/home/lucads/autsys-projects-student-airrace/catkin_ws/src/vision/image_pipeline/depth_image_proc/include/**",
+        "/home/lucads/autsys-projects-student-airrace/catkin_ws/src/utilities/fla_utils/include/**",
+        "/home/lucads/autsys-projects-student-airrace/catkin_ws/src/vision/image_pipeline/image_proc/include/**",
+        "/home/lucads/autsys-projects-student-airrace/catkin_ws/src/mav_comm/mav_msgs/include/**",
+        "/home/lucads/autsys-projects-student-airrace/catkin_ws/src/mav_comm/mav_planning_msgs/include/**",
+        "/home/lucads/autsys-projects-student-airrace/catkin_ws/src/vision/image_pipeline/stereo_image_proc/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

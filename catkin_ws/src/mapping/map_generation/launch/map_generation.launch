@@ -1,0 +1,7 @@
+<launch>
+    <!-- Run the map client and service node -->
+    <node name="map_client" pkg="map_generation" type="map_client" />
+    <node name="map_service" pkg="map_generation" type="map_service">
+        <param name="outlier_analysis"   value="true"/>
+    </node>
+</launch>

@@ -1,0 +1,8 @@
+<launch>
+    <!-- launch the simulation launch file
+    <include file="$(find simulation)/launch/simulation.launch"/>-->
+    <!-- launch traj_publisher node-->
+    <node pkg="controller8_pkg" type="controller8_node" name="controller8_node" output="screen">
+        <rosparam command="load" file="$(find controller8_pkg)/config/controller_params.yaml"/>
+    </node>
+</launch>

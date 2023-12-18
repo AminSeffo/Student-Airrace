@@ -1,0 +1,42 @@
+Gates: {
+  Gate_1: {
+    pos: [20.0, 6, 5.0],
+    orientation: 0.0
+  },
+  Gate_2: {
+    pos: [30.0, 6, 5.0],
+    orientation: -45.0
+  },
+  Gate_3: {
+    pos: [55.0, 6, 20.0],
+    orientation: -90.0
+  },
+  Gate_4: {
+    pos: [55.0, 6, 40.0],
+    orientation: -135.0
+  },
+  Gate_5: {
+    pos: [30.0, 6, 65.0],
+    orientation: -180.0
+  },
+  Gate_6: {
+    pos: [-40.0, 6, 65.0],
+    orientation: -225.0
+  },
+  Gate_7: {
+    pos: [-70.0, 6, 35.0],
+    orientation: -270.0
+  },
+  Gate_8: {
+    pos: [-70.0, 6, 5.0],
+    orientation: -315.0
+  },
+  Gate_9: {
+    pos: [-40, 6 , -25.0],
+    orientation: 0.0
+  },
+  Gate_10: {
+    pos: [-10, 6, -25.0],
+    orientation: -45.0
+  },
+}

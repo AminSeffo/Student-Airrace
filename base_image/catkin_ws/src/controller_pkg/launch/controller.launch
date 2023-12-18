@@ -1,0 +1,8 @@
+<launch>
+    <!-- launch the simulation launch file
+    <include file="$(find simulation)/launch/simulation.launch"/>-->
+    <!-- launch traj_publisher node
+    <node pkg="controller_pkg" type="traj_publisher" name="traj_publisher" />-->
+    <!-- launch controller node-->
+    <node pkg="controller_pkg" type="controller_node" name="controller_node" output="screen"/>
+</launch>

@@ -1,0 +1,4 @@
+# define parameters for the navigation stack
+one_marker_strategy: {
+  setpointReachedThreshold: 3.0
+}

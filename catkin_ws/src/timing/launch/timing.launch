@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+   <node name="timing_node" pkg="timing" type="timing" required="true" output="screen">
+    <rosparam command="load" file="$(find timing)/config/referenceGate.yaml"/>
+  </node>
+</launch>

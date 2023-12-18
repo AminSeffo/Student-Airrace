@@ -1,0 +1,55 @@
+<launch>
+<arg name="sim_type" default="sitl"/>
+<arg name="drone" default="Default"/>
+<arg name="trajectory" default="6"/>
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find simulation)/cfg/config.rviz" />
+<!-- include the arcuo detection lauch file -->
+
+<group if="$(eval drone == 'Default')" >
+    <include file="$(find controller_pkg)/launch/controller.launch"/>
+    <include file="$(find simulation)/launch/simulation.launch" if="$(eval sim_type == 'sitl')">
+        <arg name="drone" value="Default"/>
+    </include>
+    <include file="$(find aruco_ros)/launch/marker_publisher.launch" >
+        <arg name="camera_frame" value="Quadrotor/Sensors/RGBCameraLeft"/>
+    </include>
+</group>
+
+<group if="$(eval drone == 'StarOne')" >
+    <include file="$(find controller_pkg)/launch/controller.launch"/>
+    <include file="$(find simulation)/launch/simulation.launch" if="$(eval sim_type == 'sitl')">
+        <arg name="drone" value="StarOne"/>
+    </include>
+    <include file="$(find aruco_ros)/launch/marker_publisher.launch" >
+        <arg name="camera_frame" value="StarOne/Sensors/RGBCameraLeft"/>
+    </include>
+</group>
+
+<group if="$(eval drone == 'StarOne8')" >
+    <include file="$(find controller8_pkg)/launch/controller8.launch"/>
+    <include file="$(find simulation)/launch/simulation.launch" if="$(eval sim_type == 'sitl')">
+        <arg name="drone" value="StarOne8"/>
+    </include>
+    <include file="$(find aruco_ros)/launch/marker_publisher.launch" >
+        <arg name="camera_frame" value="StarOne/Sensors/RGBCameraLeft"/>
+    </include>
+</group>
+
+
+
+
+<include file="$(find timing)/launch/timing.launch"/>
+<!-- launch map generation -->
+<include file="$(find map_generation)/launch/map_generation.launch"/>
+<!-- launch navigation -->
+<include file="$(find navigation)/launch/navigation.launch"/>
+
+<!-- launch trajectory3 -->
+<include file="$(find trajectory3)/launch/trajectory3.launch" if="$(eval trajectory == '3')"/>
+<!-- launch trajectory4 -->
+<include file="$(find trajectory4)/launch/trajectory4.launch" if="$(eval trajectory == '4')"/>
+<!-- launch trajectory6 -->
+<include file="$(find trajectory6)/launch/trajectory6.launch" if="$(eval trajectory == '6')"/>
+
+
+</launch>
